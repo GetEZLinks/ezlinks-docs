@@ -1,5 +1,5 @@
-// app/docs/quick-start/page.js
-import styles from '../styles/DocPage.module.scss';
+// app/quick-start/page.js
+import styles from '@/styles/DocPage.module.scss';
 
 export const metadata = {
   title: 'Quick Start Guide | EZLinks Documentation',

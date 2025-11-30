@@ -1,6 +1,7 @@
-// app/docs/page.js
-import Card from './components/Card';
-import styles from './styles/GettingStarted.module.scss';
+// app/page.js
+
+import styles from '../../styles/GettingStarted.module.scss';
+import Card from '../../components/Card';
 
 export const metadata = {
   title: 'EZLinks Documentation | Getting Started',
@@ -28,7 +29,7 @@ export default function DocsHomePage() {
       <section className={styles.cardSection}>
         <h2 id="quick-links" className={styles.sectionTitle}>Quick Links</h2>
         <div className={styles.cardGrid}>
-          <Card 
+          <Card
             title="Quick Start Guide"
             description="Get up and running with EZLinks in minutes with our step-by-step guide."
             href="/docs/quick-start"

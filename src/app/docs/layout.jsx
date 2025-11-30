@@ -1,9 +1,9 @@
 // app/docs/layout.js
 import { Inter } from 'next/font/google';
-import Sidebar from './components/Sidebar';
-import PageNavigation from './components/PageNavigation';
-import MobileNav from './components/MobileNav';
-import styles from './styles/DocsLayout.module.scss';
+import Sidebar from '../../components/Sidebar';
+import PageNavigation from '../../components/PageNavigation';
+import MobileNav from '../../components/MobileNav';
+import styles from '../../styles/DocsLayout.module.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 

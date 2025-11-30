@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${jetBrainsMono.variable}`}>
+      <body className={`${inter.variable} ${jetBrainsMono.variable} font-sans bg-white dark:bg-black text-black dark:text-white`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

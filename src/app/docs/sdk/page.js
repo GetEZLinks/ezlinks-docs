@@ -1,5 +1,5 @@
-// app/docs/api/page.js
-import styles from '../styles/DocPage.module.scss';
+// app/docs/sdk/page.js
+import styles from '@/styles/DocPage.module.scss';
 
 export const metadata = {
   title: 'SDK Reference | EZLinks Documentation',

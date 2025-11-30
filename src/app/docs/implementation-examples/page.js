@@ -1,5 +1,5 @@
-// app/docs/implementation-examples/page.js
-import styles from '../styles/DocPage.module.scss';
+// app/implementation-examples/page.js
+import styles from '@/styles/DocPage.module.scss';
 
 export const metadata = {
   title: 'Implementation Examples | EZLinks Documentation',
