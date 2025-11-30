@@ -19,7 +19,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 500;
+  font-size: 1rem;
 }
+
 
 a {
   color: inherit;
@@ -37,12 +39,13 @@ code {
 h1, 
 h2 {
   font-family: var(--font-jetbrains);
-  font-weight: 900 !important;
+  font-weight: 600;
   // letter-spacing: -1px !important;
 }
 
 h3 {
   font-family: var(--font-jetbrains);
+  font-size: 1.25rem;
 }
 
 // Global utilities

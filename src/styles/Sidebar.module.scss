@@ -10,10 +10,9 @@ $dark-text: #333333;
 $background: #f8f9fa;
 
 .sidebar {
-  background-color: $background;
-  border-right: 1px solid rgba(0, 0, 0, 0.04);
+  // background-color: $background;
+  // border-right: 1px solid rgba(0, 0, 0, 0.04);
   padding: 1.5rem 0;
-  // height: 100vh;
   overflow-y: auto;
   position: sticky;
   top: 0;
@@ -69,7 +68,7 @@ $background: #f8f9fa;
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.2s ease;
-  
+  font-size: 14px;
   &:hover {
     background-color: rgba($primary-purple, 0.05);
     color: $primary-purple;

@@ -1,5 +1,6 @@
 // app/docs/sdk/page.js
 import styles from '@/styles/DocPage.module.scss';
+import CodeSnippet from '@/components/CodeSnippet';
 
 export const metadata = {
   title: 'SDK Reference | EZLinks Documentation',
@@ -211,7 +212,23 @@ export default function SDKReferencePage() {
       <h2 id="link-properties">Link Properties</h2>
       <p>The LinkProperties object lets you customize the behavior of your deep links.</p>
       
-      <h3 id="link-properties-ios">iOS</h3>
+      <h3 id="linkproperties-ios">iOS</h3>
+      <CodeSnippet
+        language="swift"
+        codeString={`let linkProperties = EZLinkProperties()
+linkProperties.feature = "sharing"              // The feature being used
+linkProperties.channel = "facebook"             // The channel being used
+linkProperties.campaign = "summer_promotion"    // The campaign this link is part of
+linkProperties.stage = "new_user"               // The stage in the user journey
+linkProperties.tags = ["tag1", "tag2"]          // List of tags
+
+// Add custom control parameters
+linkProperties.addControlParam("$desktop_url", value: "https://example.com/desktop")
+linkProperties.addControlParam("$ios_url", value: "https://itunes.apple.com/app/id123456789")
+linkProperties.addControlParam("custom_data", value: "any_value")`}
+      />
+{/* 
+      <h3 id="link-properties-swift">Swift</h3>
       <pre><code>
 {`let linkProperties = EZLinkProperties()
 linkProperties.feature = "sharing"              // The feature being used
@@ -224,11 +241,12 @@ linkProperties.tags = ["tag1", "tag2"]          // List of tags
 linkProperties.addControlParam("$desktop_url", value: "https://example.com/desktop")
 linkProperties.addControlParam("$ios_url", value: "https://itunes.apple.com/app/id123456789")
 linkProperties.addControlParam("custom_data", value: "any_value")`}
-      </code></pre>
+      </code></pre> */}
       
       <h3 id="link-properties-android">Android</h3>
-      <pre><code>
-{`LinkProperties linkProperties = new LinkProperties()
+      <CodeSnippet
+        language="java"
+        codeString={`LinkProperties linkProperties = new LinkProperties()
     .setFeature("sharing")                      // The feature being used
     .setChannel("facebook")                     // The channel being used
     .setCampaign("summer_promotion")            // The campaign this link is part of
@@ -240,11 +258,12 @@ linkProperties.addControlParam("custom_data", value: "any_value")`}
     .addControlParameter("$desktop_url", "https://example.com/desktop")
     .addControlParameter("$ios_url", "https://itunes.apple.com/app/id123456789")
     .addControlParameter("custom_data", "any_value");`}
-      </code></pre>
+      />
       
       <h3 id="link-properties-web">Web</h3>
-      <pre><code>
-{`const linkProperties = {
+      <CodeSnippet
+        language="javascript"
+        codeString={`const linkProperties = {
   feature: "sharing",               // The feature being used
   channel: "website",               // The channel being used
   campaign: "summer_promotion",     // The campaign this link is part of
@@ -258,7 +277,7 @@ linkProperties.addControlParam("custom_data", value: "any_value")`}
     "custom_data": "any_value"
   }
 };`}
-      </code></pre>
+      />
 
       <h2 id="standard-events">Standard Events</h2>
       <p>EZLinks provides a set of standard events that you can track to measure user engagement.</p>

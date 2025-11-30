@@ -40,22 +40,6 @@ export default function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.logo}>
-        <Link href="/">
-          <div className={styles.logoContainer}>
-            {/* Replace with your logo */}
-            <div className={styles.logoPlaceholder}>
-              <Image 
-                src={EZLinksLogo}
-                alt="EZLinks logo"
-                height={28}
-                width={0}
-              />
-            </div>
-          </div>
-        </Link>
-      </div>
-      
       <nav className={styles.nav}>
         {navItems.map((section, index) => (
           <div key={index} className={styles.navSection}>

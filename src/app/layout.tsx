@@ -15,6 +15,7 @@ import Sidebar from '../components/Sidebar';
 import PageNavigation from '../components/PageNavigation';
 import MobileNav from '../components/MobileNav';
 import styles from '../styles/DocsLayout.module.scss';
+import Header from "@/components/Header/Header";
 
 // Initialize fonts
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -35,6 +36,7 @@ export default function RootLayout({ // It's still called RootLayout, but its co
           {/* DOCS LAYOUT part (Sidebar/Nav structure) */}
           <div className={inter.className}>
             <MobileNav />
+            <Header />
             <div className={styles.docsContainer}>
               <Sidebar />
               <main className={styles.mainContent}>
