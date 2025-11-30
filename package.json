@@ -12,6 +12,7 @@
     "@netlify/next": "^1.4.9",
     "@stripe/react-stripe-js": "^3.9.2",
     "@stripe/stripe-js": "^7.9.0",
+    "bright": "^1.0.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
