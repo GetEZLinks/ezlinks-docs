@@ -12,15 +12,15 @@ const navItems = [
   {
     section: 'Get Started',
     items: [
-      { title: 'Overview', href: '/docs' },
-      { title: 'Quick Start Guide', href: '/docs/quick-start' },
+      { title: 'Overview', href: '/' },
+      { title: 'Quick Start Guide', href: '/quick-start' },
       // { title: 'Initial Setup', href: '/docs/setup' },
     ]
   },
   {
     section: 'Guides',
     items: [
-      { title: 'Implementation Examples', href: '/docs/implementation-examples' },
+      { title: 'Implementation Examples', href: '/implementation-examples' },
       // { title: 'Game Developer\'s Guide', href: '/docs/game-developers' },
       // { title: 'Indie Developer\'s Guide', href: '/docs/indie-developers' },
     ]
@@ -28,9 +28,9 @@ const navItems = [
   {
     section: 'Reference',
     items: [
-      // { title: 'SDK Reference', href: '/docs/sdk' },
-      { title: 'SDK Reference', href: '/docs/sdk' },
-      { title: 'FAQ & Troubleshooting', href: '/docs/faq' },
+      // { title: 'SDK Reference', href: '/sdk' },
+      { title: 'SDK Reference', href: '/sdk' },
+      { title: 'FAQ & Troubleshooting', href: '/' },
     ]
   }
 ];
