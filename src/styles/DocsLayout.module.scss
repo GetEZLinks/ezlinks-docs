@@ -24,8 +24,11 @@ $background: #ffffff;
 .mainContent {
   padding-top: 1rem;
   padding-left: 2rem;
-  max-width: 90%;
+  max-width: 1024px;
+  width: 800px;
   overflow-x: hidden;
+  margin-left: 280px;
+  position: absolute;
 }
 
 // Media queries for responsive layout

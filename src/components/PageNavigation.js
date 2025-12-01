@@ -5,9 +5,13 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/PageNavigation.module.scss';
 
+import { usePathname } from 'next/navigation';
+
 export default function PageNavigation() {
   const [headings, setHeadings] = useState([]);
   const [activeId, setActiveId] = useState('');
+
+  const pathname = usePathname();
 
   useEffect(() => {
     // Get all headings in the content
@@ -38,21 +42,22 @@ export default function PageNavigation() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   if (headings.length === 0) {
     return null;
   }
 
+  console.log('Headings:', headings);
   return (
     <aside className={styles.pageNavigation}>
       <div className={styles.sticky}>
         <h4 className={styles.navTitle}>On this page</h4>
         <nav>
           <ul className={styles.navList}>
-            {headings.map((heading) => (
+            {headings.map((heading, index) => (
               <li 
-                key={heading.id} 
+                key={index} 
                 className={`
                   ${styles.navItem} 
                   ${heading.level === 3 ? styles.subItem : ''} 

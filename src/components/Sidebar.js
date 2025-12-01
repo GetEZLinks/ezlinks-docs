@@ -5,8 +5,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from '../styles/Sidebar.module.scss';
-import Image from 'next/image';
-import EZLinksLogo from "@/logo/ezlinks.svg";
 
 const navItems = [
   {
@@ -28,9 +26,8 @@ const navItems = [
   {
     section: 'Reference',
     items: [
-      // { title: 'SDK Reference', href: '/sdk' },
       { title: 'SDK Reference', href: '/sdk' },
-      { title: 'FAQ & Troubleshooting', href: '/' },
+      { title: 'FAQ & Troubleshooting', href: '/faq' },
     ]
   }
 ];
@@ -43,7 +40,7 @@ export default function Sidebar() {
       <nav className={styles.nav}>
         {navItems.map((section, index) => (
           <div key={index} className={styles.navSection}>
-            <h3 className={styles.sectionTitle}>{section.section}</h3>
+            <h4 className={styles.sectionTitle}>{section.section}</h4>
             <ul className={styles.navList}>
               {section.items.map((item, itemIndex) => {
                 const isActive = pathname === item.href;

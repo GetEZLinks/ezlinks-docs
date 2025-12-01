@@ -14,8 +14,9 @@ $background: #f8f9fa;
   // border-right: 1px solid rgba(0, 0, 0, 0.04);
   padding: 1.5rem 0;
   overflow-y: auto;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  width: 256px;
+  top: 80px;
 }
 
 .logo {

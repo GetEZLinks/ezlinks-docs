@@ -27,7 +27,7 @@ export default function DocsHomePage() {
       </section>
 
       <section className={styles.cardSection}>
-        <h3 id="quick-links" className={styles.sectionTitle}>Quick Links</h3>
+        <h2 id="quick-links" className={styles.sectionTitle}>Quick Links</h2>
         <div className={styles.cardGrid}>
           <Card
             title="Quick Start Guide"
@@ -51,7 +51,7 @@ export default function DocsHomePage() {
       </section>
 
       <section className={styles.cardSection}>
-        <h3 id="developer-guides" className={styles.sectionTitle}>Developer Guides</h3>
+        <h2 id="developer-guides" className={styles.sectionTitle}>Developer Guides</h2>
         <div className={styles.cardGrid}>
           <Card 
             title="Game Developer's Guide"
@@ -75,7 +75,7 @@ export default function DocsHomePage() {
       </section>
 
       <section style={{margin: "3rem 0"}}>
-        <h3 id="why-ezlinks" className={styles.sectionTitle}>Why EZLinks?</h3>
+        <h2 id="why-ezlinks" className={styles.sectionTitle}>Why EZLinks?</h2>
         <div className={styles.featureGrid}>
           <div className={styles.featureItem}>
             <h3>Simple Implementation</h3>

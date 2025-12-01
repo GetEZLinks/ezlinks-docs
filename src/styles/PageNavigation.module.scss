@@ -11,8 +11,10 @@ $background: #f8f9fa;
 
 .pageNavigation {
   padding: 2rem 1rem;
-  // border-left: 1px solid rgba(0, 0, 0, 0.1);
-  // height: 100vh;
+  position: fixed;
+  top: 80px;
+  right: 200px;
+  width: 220px;
 }
 
 .sticky {
@@ -57,6 +59,7 @@ $background: #f8f9fa;
   &.subItem {
     padding-left: 1rem;
     font-size: 0.8125rem;
+    opacity: 0.6;
   }
 }
 
