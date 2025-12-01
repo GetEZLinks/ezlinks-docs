@@ -10,6 +10,12 @@ $coral-accent: #f05365;
 $dark-text: #333333;
 $background: #ffffff;
 
+$sidebar-width: 250px;
+$page-nav-width: 200px;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+
 .docsContainer {
   display: grid;
   grid-template-columns: 280px 1fr 220px;
@@ -19,16 +25,27 @@ $background: #ffffff;
   max-width: 80%;
   margin: 0 auto;
   padding-top: 80px;
+  position: relative;
+
+  @media (max-width: 1440px) {
+    grid-template-columns: 240px 1fr;
+    max-width: 100%;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 1rem;
+  }
 }
 
 .mainContent {
-  padding-top: 1rem;
-  padding-left: 2rem;
-  max-width: 1024px;
-  width: 800px;
+  padding: 2rem;
+  max-width: 100%;
+  width: calc(100% - #{$sidebar-width} - #{$page-nav-width} - 80px);
   overflow-x: hidden;
-  margin-left: 280px;
   position: absolute;
+  left: $sidebar-width;
+  margin-top: 80px;
 }
 
 // Media queries for responsive layout

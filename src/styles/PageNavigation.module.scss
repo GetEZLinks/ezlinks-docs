@@ -8,13 +8,17 @@ $teal-accent: #2ec4b6;
 $coral-accent: #f05365;
 $dark-text: #333333;
 $background: #f8f9fa;
+$page-nav-width: 250px;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px; 
 
 .pageNavigation {
   padding: 2rem 1rem;
   position: fixed;
   top: 80px;
-  right: 200px;
-  width: 220px;
+  left: calc(90vw - #{$page-nav-width});
+  width: $page-nav-width;
+  height: calc(100% - 80px);
 }
 
 .sticky {
@@ -68,6 +72,12 @@ $background: #f8f9fa;
 
 @media (max-width: 1024px) {
   .pageNavigation {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
     display: none;
   }
 }

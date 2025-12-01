@@ -27,7 +27,7 @@ const navItems = [
     section: 'Reference',
     items: [
       { title: 'SDK Reference', href: '/sdk' },
-      { title: 'FAQ & Troubleshooting', href: '/faq' },
+      // { title: 'FAQ & Troubleshooting', href: '/faq' },
     ]
   }
 ];

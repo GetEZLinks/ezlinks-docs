@@ -9,16 +9,34 @@ $coral-accent: #f05365;
 $dark-text: #333333;
 $background: #f8f9fa;
 
-.sidebar {
-  // background-color: $background;
-  // border-right: 1px solid rgba(0, 0, 0, 0.04);
-  padding: 1.5rem 0;
-  overflow-y: auto;
-  position: fixed;
-  width: 256px;
-  top: 80px;
-}
+$sidebar-width: 250px;
+$page-nav-width: 200px;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
 
+
+// .sidebar {
+//   // // background-color: $background;
+//   // // border-right: 1px solid rgba(0, 0, 0, 0.04);
+//   // padding: 1.5rem 0;
+//   // overflow-y: auto;
+//   // position: fixed;
+//   // width: 256px;
+//   // top: 80px;
+
+//   // 
+// }
+
+// Sidebar (Left, fixed/absolute position)
+.sidebar {
+  position: fixed;
+  top: 80px; // Aligns with the container's top padding
+  width: $sidebar-width;
+  height: calc(100% - 40px); // Adjust height for top/bottom padding
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  overflow-y: auto; // Add scrolling if content is long
+}
 .logo {
   padding: 0 1.5rem 1.5rem;
   margin-bottom: 1rem;
@@ -79,6 +97,12 @@ $background: #f8f9fa;
     background-color: rgba($primary-purple, 0.1);
     color: $primary-purple;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pageNavigation {
+    display: none;
   }
 }
 
