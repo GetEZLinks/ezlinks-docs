@@ -39,14 +39,12 @@ export default function DocsHomePage() {
             title="Quick Start Guide"
             description="Get up and running with EZLinks in minutes with our step-by-step guide."
             href="/quick-start"
-            // icon="🚀"
             icon={BoltIcon}
           />
           <Card 
             title="SDK Reference"
             description="Comprehensive documentation for our iOS, Android, Web, and Unity SDKs."
             href="/sdk"
-            // icon="📚"
             icon={CodeBlockIcon}
           />
           <Card 
@@ -64,22 +62,19 @@ export default function DocsHomePage() {
           <Card 
             title="Game Developer's Guide"
             description="Specialized instructions for game studios and indie game developers with platform-specific details."
-            href="/docs/game-developers"
-            // icon="🎮"
+            href="/"
             icon={GuideIcon}
           />
           <Card 
             title="Indie Developer's Guide"
             description="Resources tailored to indie developers, focusing on quick implementation and cost-effectiveness."
-            href="/docs/indie-developers"
-            // icon="🛠️"
+            href="/"
             icon={GuideIcon}
           />
           <Card 
             title="FAQ & Troubleshooting"
             description="Answers to common questions and solutions to typical integration challenges."
-            href="/docs/faq"
-            // icon="❓"
+            href="/"
             icon={FaqIcon}
           />
         </div>
