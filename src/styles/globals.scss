@@ -38,8 +38,9 @@ code {
 }
 h1, 
 h2 {
-  font-family: var(--font-jetbrains);
-  font-weight: 600;
+  // font-family: var(--font-jetbrains);
+  font-family: var(--font-vollkorn), serif !important;
+  font-weight: 600 !important;
   // letter-spacing: -1px !important;
 }
 

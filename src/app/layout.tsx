@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from '@/hooks/useTheme';
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Vollkorn } from "next/font/google";
 import "../styles/globals.scss";
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ import Header from "@/components/Header/Header";
 // Initialize fonts
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
+const vollkorn = Vollkorn({ subsets: ['latin'], variable: '--font-vollkorn', weight: ['500', '600'] });
 
 
 export default function RootLayout({ // It's still called RootLayout, but its content is rich
@@ -30,7 +31,7 @@ export default function RootLayout({ // It's still called RootLayout, but its co
   return (
     // ROOT LAYOUT part (HTML structure)
     <html lang="en">
-      <body className={`${inter.variable} ${jetBrainsMono.variable} font-sans bg-white dark:bg-black text-black dark:text-white`}>
+      <body className={`${inter.variable} ${jetBrainsMono.variable} ${vollkorn.variable} font-sans bg-white dark:bg-black text-black dark:text-white`}>
         <ThemeProvider>
           
           {/* DOCS LAYOUT part (Sidebar/Nav structure) */}
