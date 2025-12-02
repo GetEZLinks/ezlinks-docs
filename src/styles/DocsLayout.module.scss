@@ -11,14 +11,14 @@ $dark-text: #333333;
 $background: #ffffff;
 
 $sidebar-width: 250px;
-$page-nav-width: 200px;
+$page-nav-width: 220px;
 $mobile-breakpoint: 768px;
 $tablet-breakpoint: 1024px;
 
 
 .docsContainer {
   display: grid;
-  grid-template-columns: 280px 1fr 220px;
+  grid-template-columns: $sidebar-width 1fr $page-nav-width;
   min-height: 100vh;
   background-color: $background;
   color: $dark-text;
@@ -39,13 +39,30 @@ $tablet-breakpoint: 1024px;
 }
 
 .mainContent {
-  padding: 2rem;
+  padding: 1rem;
   max-width: 100%;
-  width: calc(100% - #{$sidebar-width} - #{$page-nav-width} - 80px);
+  width: calc(100% - #{$sidebar-width} - #{$page-nav-width} - 40px);
   overflow-x: hidden;
   position: absolute;
   left: $sidebar-width;
   margin-top: 80px;
+
+
+  @media (max-width: 1440px) {
+    width: calc(100% - #{$sidebar-width} - #{$page-nav-width} - 180px);
+  }
+
+  @media (max-width: 1024px) {
+    width: calc(100% - #{$sidebar-width});
+  }
+
+
+  @media (max-width: 768px) {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    padding: 1rem 0;
+  }
 }
 
 // Media queries for responsive layout

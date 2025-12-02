@@ -3,6 +3,12 @@
 import styles from '../styles/GettingStarted.module.scss';
 import Card from '../components/Card';
 
+import GuideIcon from '@/icons/guide.svg';
+import BoltIcon from '@/icons/bolt.svg';
+import CodeBlockIcon from '@/icons/code-block.svg';
+
+import FaqIcon from '@/icons/faq.svg';
+
 export const metadata = {
   title: 'EZLinks Documentation | Getting Started',
   description: 'Learn how to implement and use EZLinks in your applications',
@@ -33,19 +39,21 @@ export default function DocsHomePage() {
             title="Quick Start Guide"
             description="Get up and running with EZLinks in minutes with our step-by-step guide."
             href="/quick-start"
-            icon="🚀"
+            // icon="🚀"
+            icon={BoltIcon}
           />
           <Card 
             title="SDK Reference"
             description="Comprehensive documentation for our iOS, Android, Web, and Unity SDKs."
             href="/sdk"
-            icon="📚"
+            // icon="📚"
+            icon={CodeBlockIcon}
           />
           <Card 
             title="Implementation Examples"
             description="Real-world examples showing how to implement EZLinks for common use cases."
             href="/implementation-examples"
-            icon="💻"
+            icon={GuideIcon}
           />
         </div>
       </section>
@@ -57,19 +65,22 @@ export default function DocsHomePage() {
             title="Game Developer's Guide"
             description="Specialized instructions for game studios and indie game developers with platform-specific details."
             href="/docs/game-developers"
-            icon="🎮"
+            // icon="🎮"
+            icon={GuideIcon}
           />
           <Card 
             title="Indie Developer's Guide"
             description="Resources tailored to indie developers, focusing on quick implementation and cost-effectiveness."
             href="/docs/indie-developers"
-            icon="🛠️"
+            // icon="🛠️"
+            icon={GuideIcon}
           />
           <Card 
             title="FAQ & Troubleshooting"
             description="Answers to common questions and solutions to typical integration challenges."
             href="/docs/faq"
-            icon="❓"
+            // icon="❓"
+            icon={FaqIcon}
           />
         </div>
       </section>

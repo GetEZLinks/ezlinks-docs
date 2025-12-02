@@ -3,7 +3,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from '../styles/PageNavigation.module.scss';
+import TOCIcon from '@/icons/toc.svg';
 
 import { usePathname } from 'next/navigation';
 
@@ -48,10 +50,11 @@ export default function PageNavigation() {
     return null;
   }
 
-  console.log('Headings:', headings);
+
   return (
     <aside className={styles.pageNavigation}>
       <div className={styles.sticky}>
+        <Image src={TOCIcon} alt="EzLinks" width={13} height={13} />
         <h4 className={styles.navTitle}>On this page</h4>
         <nav>
           <ul className={styles.navList}>
