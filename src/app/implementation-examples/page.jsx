@@ -304,7 +304,7 @@ EZLinks.createLink(campaignData).then(link => {
       
       <p>
         If you have questions or need help with a specific implementation, feel free to
-        <a href="mailto:support@ezlinks.io">contact our support team</a>.
+        <a href="mailto:support@getezlinks.io">contact our support team</a>.
       </p>
     </div>
   );

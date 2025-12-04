@@ -16,11 +16,12 @@ $background: #f8f9fa;
 }
 
 .card {
-  background-color: $background;
+  // background-color: $background;
   border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.10);
   padding: 1.5rem;
   height: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
