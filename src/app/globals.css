@@ -27,9 +27,6 @@ button {
   cursor: pointer;
 }
 
-code {
-  font-family: var(--font-jetbrains);
-}
 
 /* // Global utilities */
 .container {

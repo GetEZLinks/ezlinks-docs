@@ -33,14 +33,12 @@ button {
   cursor: pointer;
 }
 
-code {
-  font-family: var(--font-jetbrains);
-}
+
 h1, 
 h2 {
-  // font-family: var(--font-jetbrains);
-  font-family: var(--font-vollkorn), serif !important;
+  font-family: var(--font-vollkorn), serif;
   font-weight: 600 !important;
+  color: black;;
   // letter-spacing: -1px !important;
 }
 

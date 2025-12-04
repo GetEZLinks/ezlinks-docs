@@ -47,6 +47,8 @@ $background: #f8f9fa;
   
   pre {
     // background-color: #f6f8fa;
+    display: flex;
+    justify-content: space-between;
     border-radius: 12px;
     padding: 16px;
     overflow: auto;
@@ -62,7 +64,7 @@ $background: #f8f9fa;
   }
   
   code {
-    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    // font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
     font-size: 0.9em;
     padding: 0.2em 0.4em;
     background-color: rgba(0, 0, 0, 0.05);
@@ -91,7 +93,7 @@ $background: #f8f9fa;
   .introduction {
     font-size: 1.125rem;
     color: rgba($dark-text, 0.8);
-    max-width: 700px;
+    // max-width: 700px;
     line-height: 1.5;
     margin-bottom: 2rem;
   }

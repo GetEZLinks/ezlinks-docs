@@ -297,8 +297,9 @@ EZLinks.createLink(campaignData).then(link => {
       <h2 id="next-steps">Next Steps</h2>
       <p>
         These examples cover some of the most common use cases for EZLinks. For more specific implementations,
-        check out the detailed <a href="/docs/sdk">SDK Reference</a> or our specialized guides for
-        <a href="/docs/game-developers">Game Developers</a> and <a href="/docs/indie-developers">Indie Developers</a>.
+        check out the detailed <a href="/sdk">SDK Reference</a>
+        {/* or our specialized guides for */}
+        {/* <a href="/docs/game-developers">Game Developers</a> and <a href="/docs/indie-developers">Indie Developers</a>. */}
       </p>
       
       <p>

@@ -1,5 +1,6 @@
 // app/quick-start/page.js
 import CodeSnippet from '@/components/CodeSnippet';
+import CopyButton from '@/components/CopyButton/CopyButton';
 import styles from '@/styles/DocPage.module.scss';
 
 export const metadata = {
@@ -24,23 +25,34 @@ export default function QuickStartPage() {
       <pre><code>
 {`// Podfile
 pod 'EZLinks', '~> 1.0.0'`}
-      </code></pre>
+      </code>
+      <CopyButton codeToCopy={`pod 'EZLinks', '~> 1.0.0'`} />
+      </pre>
       <p>Then run:</p>
-      <pre><code>pod install</code></pre>
+      <pre><code>pod install</code> <CopyButton codeToCopy="pod install" /></pre>
 
       <h3 id="android-installation">Android</h3>
       <p>Add the following to your app-level build.gradle:</p>
-      <pre><code>
-        {`dependencies {
+      <pre>
+        <code>
+{`dependencies {
     implementation 'io.ezlinks:ezlinks-android:1.0.0'
 }`}
-      </code></pre>
+        </code>
+        <CopyButton codeToCopy={`implementation 'io.ezlinks:ezlinks-android:1.0.0'`} /> 
+      
+      </pre>
 
       <h3 id="web-installation">Web</h3>
       <p>Install EZLinks via npm:</p>
-      <pre><code>npm install ezlinks-web --save</code></pre>
+      <pre><code>npm install ezlinks-web --save</code><CopyButton codeToCopy="npm install ezlinks-web --save" /></pre>
       <p>Or using yarn:</p>
-      <pre><code>yarn add ezlinks-web</code></pre>
+      <pre>
+        <code>
+          yarn add ezlinks-web
+        </code>
+        <CopyButton codeToCopy="yarn add ezlinks-web" />
+      </pre>
 
       <h2 id="initialization">Initialization</h2>
       <p>Initialize EZLinks in your application:</p>
@@ -206,9 +218,9 @@ EZLinks.init({
       <h2 id="next-steps">Next Steps</h2>
       <p>Now that you have EZLinks integrated into your application, you can:</p>
       <ul>
-        <li>Check out the <a href="/docs/implementation-examples">Implementation Examples</a> for common use cases</li>
-        <li>Explore the <a href="/docs/sdk">SDK Reference</a> for detailed API documentation</li>
-        <li>Learn about <a href="/docs/analytics">Analytics and Attribution</a> to track user journeys</li>
+        <li>Check out the <a href="/implementation-examples">Implementation Examples</a> for common use cases</li>
+        <li>Explore the <a href="/sdk">SDK Reference</a> for detailed API documentation</li>
+        {/* <li>Learn about <a href="/docs/analytics">Analytics and Attribution</a> to track user journeys</li> */}
       </ul>
     </div>
   );
