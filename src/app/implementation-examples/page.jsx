@@ -1,5 +1,6 @@
 // app/implementation-examples/page.js
 import styles from '@/styles/DocPage.module.scss';
+import CodeSnippet from '@/components/CodeSnippet';
 
 export const metadata = {
   title: 'Implementation Examples | EZLinks Documentation',
@@ -25,9 +26,10 @@ export default function ImplementationExamplesPage() {
       <h3 id="creating-referral-links">Creating Referral Links</h3>
       <p>When a user wants to refer friends to your app:</p>
 
-      <pre><code>
-{`// iOS
-func generateReferralLink(for userId: String) {
+      <h4>iOS</h4>
+    <CodeSnippet
+        language='swift'
+        codeString={`func generateReferralLink(for userId: String) {
     let linkProperties = EZLinkProperties()
     linkProperties.feature = "referral"
     linkProperties.channel = "user_share"
@@ -48,13 +50,13 @@ func generateReferralLink(for userId: String) {
             )
             self.present(activityVC, animated: true)
         }
-    }
-}`}
-      </code></pre>
+    }`}
+    />
 
-      <pre><code>
-{`// Android
-void generateReferralLink(String userId) {
+    <h4>Android</h4>
+    <CodeSnippet
+      language='java'
+      codeString={`void generateReferralLink(String userId) {
     LinkProperties linkProperties = new LinkProperties()
         .setFeature("referral")
         .setChannel("user_share")
@@ -74,14 +76,15 @@ void generateReferralLink(String userId) {
         }
     });
 }`}
-      </code></pre>
+      />
 
       <h3 id="handling-referral-links">Handling Referral Links</h3>
       <p>When a new user installs your app via a referral link:</p>
 
-      <pre><code>
-{`// iOS
-EZLinks.registerDeepLinkHandler { params, error, linkProperties in
+      <h4>iOS</h4>        
+      <CodeSnippet
+        language='swift'
+        codeString={`EZLinks.registerDeepLinkHandler { params, error, linkProperties in
     if let params = params as? [String: AnyObject] {
         // Check if this is a referral
         if let referringUserId = params["referring_user_id"] as? String {
@@ -93,11 +96,11 @@ EZLinks.registerDeepLinkHandler { params, error, linkProperties in
         }
     }
 }`}
-      </code></pre>
-
-      <pre><code>
-{`// Android
-@Override
+          />
+        <h4>Android</h4>    
+      <CodeSnippet
+        language='java'
+        codeString={`@Override
 protected void onStart() {
     super.onStart();
     
@@ -123,8 +126,8 @@ protected void onStart() {
         }
     }, this.getIntent().getData(), this);
 }`}
-      </code></pre>
-
+          />
+          
       <h2 id="content-sharing">Content Sharing</h2>
       <p>
         Allow users to share specific content (products, articles, videos, etc.) with deep links
@@ -134,9 +137,10 @@ protected void onStart() {
       <h3 id="sharing-product-details">Sharing Product Details</h3>
       <p>When a user wants to share a product:</p>
 
-      <pre><code>
-{`// iOS
-func shareProduct(productId: String, productName: String, productImage: String) {
+    <h4>iOS</h4>        
+      <CodeSnippet
+        language='swift'
+        codeString={`func shareProduct(productId: String, productName: String, productImage: String) {
     let linkProperties = EZLinkProperties()
     linkProperties.feature = "sharing"
     linkProperties.channel = "user_share"
@@ -162,14 +166,15 @@ func shareProduct(productId: String, productName: String, productImage: String) 
         }
     }
 }`}
-      </code></pre>
+      />
 
       <h3 id="deep-linking-to-content">Handling Content Deep Links</h3>
       <p>When a user opens the app via a shared content link:</p>
 
-      <pre><code>
-{`// iOS
-EZLinks.registerDeepLinkHandler { params, error, linkProperties in
+    <h4>iOS</h4>
+      <CodeSnippet
+        language='swift'
+        codeString={`EZLinks.registerDeepLinkHandler { params, error, linkProperties in
     if let params = params as? [String: AnyObject] {
         // Check if this is a product link
         if let productId = params["product_id"] as? String {
@@ -180,11 +185,12 @@ EZLinks.registerDeepLinkHandler { params, error, linkProperties in
         }
     }
 }`}
-      </code></pre>
+      />
 
-      <pre><code>
-{`// Android
-private void navigateBasedOnDeepLinkData(JSONObject params) {
+    <h4>Android</h4>
+      <CodeSnippet
+        language='java'
+        codeString={`private void navigateBasedOnDeepLinkData(JSONObject params) {
     try {
         // Check if this is a product link
         if (params.has("product_id")) {
@@ -199,7 +205,7 @@ private void navigateBasedOnDeepLinkData(JSONObject params) {
         e.printStackTrace();
     }
 }`}
-      </code></pre>
+      />
 
       <h2 id="marketing-campaigns">Marketing Campaign Tracking</h2>
       <p>
@@ -210,9 +216,10 @@ private void navigateBasedOnDeepLinkData(JSONObject params) {
       <h3 id="creating-campaign-links">Creating Campaign Links</h3>
       <p>Create unique links for different marketing channels:</p>
 
-      <pre><code>
-{`// Web - Creating a campaign link
-const campaignData = {
+    <h4>Web - Creating a campaign link</h4>
+      <CodeSnippet
+      language='javascript'
+      codeString={`const campaignData = {
   campaign: "summer_promo",
   channel: "facebook_ads",
   feature: "new_user_discount",
@@ -227,14 +234,15 @@ EZLinks.createLink(campaignData).then(link => {
   console.log('Campaign link created:', link);
   // Use this link in your Facebook ad campaign
 });`}
-      </code></pre>
+      />
 
       <h3 id="tracking-campaign-performance">Tracking Campaign Performance</h3>
       <p>When users arrive via campaign links, handle the data:</p>
 
-      <pre><code>
-{`// iOS
-EZLinks.registerDeepLinkHandler { params, error, linkProperties in
+    <h4>iOS - Handling campaign data</h4>
+      <CodeSnippet
+        language='swift'
+        codeString={`EZLinks.registerDeepLinkHandler { params, error, linkProperties in
     if let params = params as? [String: AnyObject] {
         // Track campaign data
         if let campaign = params["~campaign"] as? String,
@@ -256,8 +264,7 @@ EZLinks.registerDeepLinkHandler { params, error, linkProperties in
             }
         }
     }
-}`}
-      </code></pre>
+}`}/>
 
       <h2 id="app-to-app-linking">App-to-App Linking</h2>
       <p>
@@ -265,9 +272,9 @@ EZLinks.registerDeepLinkHandler { params, error, linkProperties in
         when navigating between them.
       </p>
 
-      <pre><code>
-{`// iOS - App A
-func openAppB(withProductId productId: String) {
+      <CodeSnippet
+        language='swift'
+        codeString={`func openAppB(withProductId productId: String) {
     let linkProperties = EZLinkProperties()
     linkProperties.feature = "app_to_app"
     linkProperties.channel = "internal"
@@ -285,7 +292,7 @@ func openAppB(withProductId productId: String) {
         }
     }
 }`}
-      </code></pre>
+      />
 
       <h2 id="next-steps">Next Steps</h2>
       <p>

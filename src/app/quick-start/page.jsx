@@ -1,4 +1,5 @@
 // app/quick-start/page.js
+import CodeSnippet from '@/components/CodeSnippet';
 import styles from '@/styles/DocPage.module.scss';
 
 export const metadata = {
@@ -30,7 +31,7 @@ pod 'EZLinks', '~> 1.0.0'`}
       <h3 id="android-installation">Android</h3>
       <p>Add the following to your app-level build.gradle:</p>
       <pre><code>
-{`dependencies {
+        {`dependencies {
     implementation 'io.ezlinks:ezlinks-android:1.0.0'
 }`}
       </code></pre>
@@ -45,8 +46,9 @@ pod 'EZLinks', '~> 1.0.0'`}
       <p>Initialize EZLinks in your application:</p>
 
       <h3 id="ios-initialization">iOS</h3>
-      <pre><code>
-{`import EZLinks
+      <CodeSnippet
+      language='swift'
+      codeString={`import EZLinks
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -55,11 +57,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }`}
-      </code></pre>
+      />
 
       <h3 id="android-initialization">Android</h3>
-      <pre><code>
-{`import io.ezlinks.EZLinks;
+      <CodeSnippet
+      language='java'
+      codeString={`import io.ezlinks.EZLinks;
 
 public class MainApplication extends Application {
     @Override
@@ -68,24 +71,25 @@ public class MainApplication extends Application {
         EZLinks.initialize(this, "YOUR_API_KEY");
     }
 }`}
-      </code></pre>
+      />
 
       <h3 id="web-initialization">Web</h3>
-      <pre><code>
-{`import EZLinks from 'ezlinks-web';
-
+      <CodeSnippet
+      language='javascript'
+      codeString={`import EZLinks from 'ezlinks-web';
 EZLinks.initialize({
   apiKey: 'YOUR_API_KEY',
   domain: 'links.yourdomain.com'
 });`}
-      </code></pre>
+      />
 
       <h2 id="creating-links">Creating Links</h2>
       <p>Create deep links programmatically:</p>
 
       <h3 id="ios-creating-links">iOS</h3>
-      <pre><code>
-{`let linkProperties = EZLinkProperties()
+      <CodeSnippet
+      language='swift'
+      codeString={`let linkProperties = EZLinkProperties()
 linkProperties.feature = "sharing"
 linkProperties.channel = "facebook"
 linkProperties.addControlParam("$desktop_url", value: "https://example.com/desktop")
@@ -96,11 +100,12 @@ EZLinks.createLink(properties: linkProperties) { (link, error) in
         print("Created link: \(link)")
     }
 }`}
-      </code></pre>
+/>
 
       <h3 id="android-creating-links">Android</h3>
-      <pre><code>
-{`LinkProperties linkProperties = new LinkProperties()
+      <CodeSnippet
+      language='java'
+      codeString={`LinkProperties linkProperties = new LinkProperties()
     .setFeature("sharing")
     .setChannel("facebook")
     .addControlParameter("$desktop_url", "https://example.com/desktop");
@@ -114,11 +119,12 @@ EZLinks.createLink(this, linkProperties, new EZLinkCreateListener() {
         }
     }
 });`}
-      </code></pre>
+      />
 
       <h3 id="web-creating-links">Web</h3>
-      <pre><code>
-{`const linkProperties = {
+      <CodeSnippet
+      language='javascript'
+      codeString={`const linkProperties = {
   feature: 'sharing',
   channel: 'website',
   data: {
@@ -130,14 +136,15 @@ EZLinks.createLink(linkProperties).then(link => {
   // Use the link
   console.log('Created link:', link);
 });`}
-      </code></pre>
+      />
 
       <h2 id="handling-links">Handling Deep Links</h2>
       <p>Set up deep link handling in your application:</p>
 
       <h3 id="ios-handling-links">iOS</h3>
-      <pre><code>
-{`func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+      <CodeSnippet
+      language='swift'
+      codeString={`func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
     return EZLinks.handleDeepLink(url)
 }
 
@@ -150,11 +157,12 @@ EZLinks.registerDeepLinkHandler { params, error, linkProperties in
         }
     }
 }`}
-      </code></pre>
+      />
 
       <h3 id="android-handling-links">Android</h3>
-      <pre><code>
-{`@Override
+      <CodeSnippet
+      language='java'
+      codeString={`@Override
 protected void onStart() {
     super.onStart();
     // Initialize Branch session
@@ -172,14 +180,15 @@ protected void onStart() {
                     e.printStackTrace();
                 }
             }
-        }
+        }})
     }, this.getIntent().getData(), this);
 }`}
-      </code></pre>
+      />
 
       <h3 id="web-handling-links">Web</h3>
-      <pre><code>
-{`// Initialize and handle deep links
+      <CodeSnippet
+      language='javascript'
+      codeString={`// Initialize and handle deep links
 EZLinks.init({
   apiKey: 'YOUR_API_KEY',
   domain: 'links.yourdomain.com',
@@ -192,7 +201,7 @@ EZLinks.init({
     }
   }
 });`}
-      </code></pre>
+      />
 
       <h2 id="next-steps">Next Steps</h2>
       <p>Now that you have EZLinks integrated into your application, you can:</p>

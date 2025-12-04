@@ -42,16 +42,16 @@ export default function DocsHomePage() {
             icon={BoltIcon}
           />
           <Card 
-            title="SDK Reference"
-            description="Comprehensive documentation for our iOS, Android, Web, and Unity SDKs."
-            href="/sdk"
-            icon={CodeBlockIcon}
-          />
-          <Card 
             title="Implementation Examples"
             description="Real-world examples showing how to implement EZLinks for common use cases."
             href="/implementation-examples"
             icon={GuideIcon}
+          />
+          <Card 
+            title="SDK Reference"
+            description="Comprehensive documentation for our iOS, Android, Web, and Unity SDKs."
+            href="/sdk"
+            icon={CodeBlockIcon}
           />
         </div>
       </section>

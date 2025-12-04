@@ -364,20 +364,21 @@ linkProperties.addControlParam("custom_data", value: "any_value")`}
       
       <h3 id="event-examples">Event Logging Examples</h3>
       
-      <pre><code>
-{`// iOS - Log a purchase event
-let params: [String: Any] = [
+      <h4>iOS</h4>
+      <CodeSnippet
+        language="swift"
+        codeString={`let params: [String: Any] = [
     "transaction_id": "1234567890",
     "currency": "USD",
     "revenue": 9.99,
     "product_id": "premium_subscription"
 ]
 EZLinks.logEvent(name: "PURCHASE", params: params)`}
-      </code></pre>
-      
-      <pre><code>
-{`// Android - Log a purchase event
-JSONObject params = new JSONObject();
+      />
+      <h4>Android</h4>
+      <CodeSnippet
+        language="java"
+        codeString={`JSONObject params = new JSONObject();
 try {
     params.put("transaction_id", "1234567890");
     params.put("currency", "USD");
@@ -387,18 +388,18 @@ try {
     e.printStackTrace();
 }
 EZLinks.logEvent(context, "PURCHASE", params);`}
-      </code></pre>
-      
-      <pre><code>
-{`// Web - Log a purchase event
-const params = {
+      />
+      <h4>Web</h4>
+      <CodeSnippet
+        language="javascript"
+        codeString={`const params = {
   transaction_id: "1234567890",
   currency: "USD",
   revenue: 9.99,
   product_id: "premium_subscription"
 };
 EZLinks.logEvent("PURCHASE", params);`}
-      </code></pre>
+      />
 
       <h2 id="advanced-features">Advanced Features</h2>
       <p>These advanced features provide more control over deep link behavior.</p>
