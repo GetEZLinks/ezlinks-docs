@@ -10,7 +10,8 @@ $dark-text: #333333;
 $background: #f8f9fa;
 
 .container {
-  max-width: 100%;
+  max-width: 90%;
+  margin: auto;
 }
 
 .header {
@@ -49,13 +50,8 @@ $background: #f8f9fa;
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-
-  @media (max-width: 1440px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
 
   @media (max-width: 1024px) {
     display: grid;

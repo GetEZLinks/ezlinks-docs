@@ -40,8 +40,8 @@ $tablet-breakpoint: 1024px;
 
 .mainContent {
   padding: 1rem;
-  max-width: 100%;
-  width: calc(100% - #{$sidebar-width} - #{$page-nav-width} - 40px);
+  max-width: 90%;
+  width: calc(100% - #{$sidebar-width} - #{$page-nav-width} - 30px);
   overflow-x: hidden;
   position: absolute;
   left: $sidebar-width;

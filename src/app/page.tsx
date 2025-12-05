@@ -53,6 +53,12 @@ export default function DocsHomePage() {
             href="/sdk"
             icon={CodeBlockIcon}
           />
+          <Card 
+            title="FAQ & Troubleshooting"
+            description="Answers to common questions and solutions to typical integration challenges."
+            href="/"
+            icon={FaqIcon}
+          />
         </div>
       </section>
 
@@ -70,12 +76,6 @@ export default function DocsHomePage() {
             description="Resources tailored to indie developers, focusing on quick implementation and cost-effectiveness."
             href="/"
             icon={GuideIcon}
-          />
-          <Card 
-            title="FAQ & Troubleshooting"
-            description="Answers to common questions and solutions to typical integration challenges."
-            href="/"
-            icon={FaqIcon}
           />
         </div>
       </section>
