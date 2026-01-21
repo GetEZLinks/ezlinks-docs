@@ -19,6 +19,7 @@ $tablet-breakpoint: 1024px;
   left: calc(90vw - #{$page-nav-width});
   width: $page-nav-width;
   height: calc(100% - 80px);
+  overflow: auto;
 }
 
 .sticky {

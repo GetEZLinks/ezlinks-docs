@@ -68,7 +68,7 @@ export default function DocsHomePage() {
           <Card 
             title="Game Developer's Guide"
             description="Specialized instructions for game studios and indie game developers with platform-specific details."
-            href="/"
+            href="/game-developers"
             icon={GuideIcon}
           />
           <Card 
